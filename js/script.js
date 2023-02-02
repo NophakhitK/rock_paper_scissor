@@ -2,6 +2,7 @@ let playerSelection;
 let computerSelection;
 let playerScore;
 let computerScore;
+let i;
 
 function getComputerChoice() {
     let randChoice = Math.floor((Math.random() * 3) + 1);
@@ -69,10 +70,10 @@ function gameFirstToThree() {
     playerScore = 0;
     computerScore = 0;
     console.log(`Game Starts. Wish you best of luck. Current Score is Player: ${playerScore} to Computer: ${computerScore}.`)
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 15; i++) {
         console.log(`Number of round is ${i}`);
         playRound();
-        if (playerScore || computerScore === 3) {
+        if (playerScore === 3 || computerScore === 3) {
             { break; }
         }
     }
